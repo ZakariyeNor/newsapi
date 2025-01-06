@@ -48,3 +48,7 @@ button:hover {
 .article p {
     color: #666;
 }
+
+.edit-form {
+    display: none;
+}

@@ -7,23 +7,33 @@
     <title>News app</title>
 </head>
 <body>
+
     <h1>Latest News</h1>
 
-    <!-- Input fields for user query -->
     <div>
         <label for="country">Country:</label>
-        <input type="text" id="country" placeholder="Enter country code (e.g., us, gb)" value="us">
-    </div>
-
-    <div>
+        <input type="text" id="country" placeholder="us">
         <label for="category">Category:</label>
-        <input type="text" id="category" placeholder="Enter category (e.g., business, sports)" value="business">
+        <input type="text" id="category" placeholder="general">
+        <button id="fetch-news">Fetch News</button>
     </div>
-    
-    <button id="fetch-news">Fetch News</button>
 
-    <!-- Container to display news articles -->
+    <!-- Display news here -->
     <div id="news-container"></div>
+
+    <!-- Form to submit a post -->
+    <h2>Submit a Post</h2>
+    <form id="submit">
+        <label for="post-title">Title:</label>
+        <input type="text" id="post-title" required>
+        <label for="post-content">Content:</label>
+        <textarea id="post-content" required></textarea>
+        <button type="submit">Submit Post</button>
+    </form>
+
+    <!-- Display submitted posts here -->
+    <div id="posts-container"></div>
+
     
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
